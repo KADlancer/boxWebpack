@@ -1,22 +1,23 @@
 {
   "name": "boxWebpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "WebPack Training unit for prototyping.",
   "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KADlancer/boxWebpack.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Konrad Abe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KADlancer/boxWebpack/issues"
   },
   "homepage": "https://github.com/KADlancer/boxWebpack#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
   "devDependencies": {
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"
