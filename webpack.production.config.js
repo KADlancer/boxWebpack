@@ -1,12 +1,14 @@
-var WebpackStrip = require('strip-loader');
-var devConfig = require('./webpack.config');
+const merge = require('webpack-merge');
+const WebpackStrip = require('strip-loader');
+const baseConfig = require('./webpack.config');
 
-var stripLoader = {
+const stripLoader = {
     test: [/\.es6$/, /\.js$/],
     exclude: /node_modules/,
-    loader: WebpackStrip.loader('console.log')
+    loader: WebpackStrip.loader('console.log'),
 };
+baseConfig.module.rules.push(stripLoader);
 
-devConfig.module.rules.push(stripLoader);
-
-module.exports = devConfig;
+module.exports = merge(baseConfig, {
+    mode: 'production',
+});
