@@ -12,7 +12,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.es6$/i,
+                test: /\.es6$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             }
