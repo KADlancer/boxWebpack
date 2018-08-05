@@ -1,10 +1,18 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
     filename: "./index.html"
   });
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const miniCssExtractPlugin = new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: "[name].css",
+    chunkFilename: "[id].css"
+})
+
 
 module.exports = {
     entry: [
@@ -35,12 +43,23 @@ module.exports = {
             },
             {
                 test:/\.(s*)css$/,
-                use:['style-loader','css-loader', 'sass-loader']
+                use:[
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                    /*
+                    // fallback to style-loader in development
+                    process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                    */
+                ]
              }
         ]
     },
     plugins: [
-        htmlWebpackPlugin
+        htmlWebpackPlugin,
+        miniCssExtractPlugin
     ],
     resolve: {
         extensions: ['.js']
