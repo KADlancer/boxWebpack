@@ -1,7 +1,10 @@
 import _ from 'lodash';
 import FormContainer from "./js/components/container/FormContainer";
 
-require('./login');
+import './index.css';
+import './css/app.scss';
+
+require('./js/login');
 
 function component() {
     var element = document.createElement('div');

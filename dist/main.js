@@ -402,7 +402,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _lodash = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _FormContainer = __webpack_require__(/*! ./js/components/container/FormContainer */ \"./src/js/components/container/FormContainer.js\");\n\nvar _FormContainer2 = _interopRequireDefault(_FormContainer);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n__webpack_require__(/*! ./login */ \"./src/login.es6\");\n\nfunction component() {\n    var element = document.createElement('div');\n\n    // Lodash, now imported by this script\n    element.innerHTML = _lodash2.default.join(['Hello, oh my', 'webpack'], ' ');\n\n    return element;\n}\n\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _lodash = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _FormContainer = __webpack_require__(/*! ./js/components/container/FormContainer */ \"./src/js/components/container/FormContainer.js\");\n\nvar _FormContainer2 = _interopRequireDefault(_FormContainer);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n__webpack_require__(/*! ./login */ \"./src/login.js\");\n\nfunction component() {\n    var element = document.createElement('div');\n\n    // Lodash, now imported by this script\n    element.innerHTML = _lodash2.default.join(['Hello, oh my', 'webpack'], ' ');\n\n    return element;\n}\n\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -430,14 +430,15 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
-/***/ "./src/login.es6":
-/*!***********************!*\
-  !*** ./src/login.es6 ***!
-  \***********************/
+/***/ "./src/login.js":
+/*!**********************!*\
+  !*** ./src/login.js ***!
+  \**********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("let login = (username, password) => {\n    if(username !== 'admin' || password !== 'radical') {\n        console.log(\"incorrect login\");\n    }\n};\n\nlogin('admin', 'WRONG!');\n\n\n//# sourceURL=webpack:///./src/login.es6?");
+"use strict";
+eval("\n\nvar login = function login(username, password) {\n    if (username !== 'admin' || password !== 'radical') {\n        console.log(\"incorrect login\");\n    }\n};\n\nlogin('admin', 'WRONG!');\n\n//# sourceURL=webpack:///./src/login.js?");
 
 /***/ }),
 
