@@ -1,6 +1,11 @@
 const path = require('path');
+
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const cleanWebpackPlugin = new CleanWebpackPlugin('dist', {} )
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
+    hash: true,
     template: "./src/index.html",
     filename: "./index.html"
   });
@@ -20,8 +25,8 @@ module.exports = {
         './src/js/utils.js'
     ],
     output: {
-        filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js'
     },
     module: {
         rules: [
@@ -44,20 +49,17 @@ module.exports = {
             {
                 test:/\.(s*)css$/,
                 use:[
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
+                    /* //fallback to style-loader in development
+                    process.env.NODE_ENV !== 'production' ? 'style-loader' : */ MiniCssExtractPlugin.loader,
+                    "css-loader", 
+                    "postcss-loader",
                     "sass-loader"
-                    /*
-                    // fallback to style-loader in development
-                    process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
-                    */
                 ]
              }
         ]
     },
     plugins: [
+        //cleanWebpackPlugin,
         htmlWebpackPlugin,
         miniCssExtractPlugin
     ],

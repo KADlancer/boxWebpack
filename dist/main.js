@@ -394,6 +394,28 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
+/***/ "./src/css/app.scss":
+/*!**************************!*\
+  !*** ./src/css/app.scss ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/css/app.scss?");
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/index.css?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -402,7 +424,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _lodash = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _FormContainer = __webpack_require__(/*! ./js/components/container/FormContainer */ \"./src/js/components/container/FormContainer.js\");\n\nvar _FormContainer2 = _interopRequireDefault(_FormContainer);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n__webpack_require__(/*! ./login */ \"./src/login.js\");\n\nfunction component() {\n    var element = document.createElement('div');\n\n    // Lodash, now imported by this script\n    element.innerHTML = _lodash2.default.join(['Hello, oh my', 'webpack'], ' ');\n\n    return element;\n}\n\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _lodash = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _FormContainer = __webpack_require__(/*! ./js/components/container/FormContainer */ \"./src/js/components/container/FormContainer.js\");\n\nvar _FormContainer2 = _interopRequireDefault(_FormContainer);\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n__webpack_require__(/*! ./css/app.scss */ \"./src/css/app.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n__webpack_require__(/*! ./js/login */ \"./src/js/login.js\");\n\nfunction component() {\n    var element = document.createElement('div');\n\n    // Lodash, now imported by this script\n    element.innerHTML = _lodash2.default.join(['Hello, oh my', 'webpack'], ' ');\n\n    return element;\n}\n\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -430,38 +452,38 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
-/***/ "./src/login.js":
-/*!**********************!*\
-  !*** ./src/login.js ***!
-  \**********************/
+/***/ "./src/js/login.js":
+/*!*************************!*\
+  !*** ./src/js/login.js ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar login = function login(username, password) {\n    if (username !== 'admin' || password !== 'radical') {\n        console.log(\"incorrect login\");\n    }\n};\n\nlogin('admin', 'WRONG!');\n\n//# sourceURL=webpack:///./src/login.js?");
+eval("\n\nvar login = function login(username, password) {\n    if (username !== 'admin' || password !== 'radical') {\n        console.log(\"incorrect login\");\n    }\n};\n\nlogin('admin', 'WRONG!');\n\n//# sourceURL=webpack:///./src/js/login.js?");
 
 /***/ }),
 
-/***/ "./src/utils.js":
-/*!**********************!*\
-  !*** ./src/utils.js ***!
-  \**********************/
+/***/ "./src/js/utils.js":
+/*!*************************!*\
+  !*** ./src/js/utils.js ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nconsole.log(\"logging from the utils.js file...\");\n\n//# sourceURL=webpack:///./src/utils.js?");
+eval("\n\nconsole.log(\"logging from the utils.js file...\");\n\n//# sourceURL=webpack:///./src/js/utils.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!*******************************************!*\
-  !*** multi ./src/index.js ./src/utils.js ***!
-  \*******************************************/
+/*!**********************************************!*\
+  !*** multi ./src/index.js ./src/js/utils.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./src/index.js */\"./src/index.js\");\nmodule.exports = __webpack_require__(/*! ./src/utils.js */\"./src/utils.js\");\n\n\n//# sourceURL=webpack:///multi_./src/index.js_./src/utils.js?");
+eval("__webpack_require__(/*! ./src/index.js */\"./src/index.js\");\nmodule.exports = __webpack_require__(/*! ./src/js/utils.js */\"./src/js/utils.js\");\n\n\n//# sourceURL=webpack:///multi_./src/index.js_./src/js/utils.js?");
 
 /***/ })
 
