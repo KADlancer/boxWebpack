@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import FormContainer from "./js/components/container/FormContainer";
 
 require('./login');
 
