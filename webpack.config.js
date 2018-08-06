@@ -38,6 +38,16 @@ module.exports = {
               }
             },
             {
+                test: /\.jsx$/,          // do transpile any files ending in .jsx
+                exclude: /node_modules/, // don't transpile node_modules
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        plugins: ['transform-react-jsx']
+                    }
+                }
+            },
+            {
               test: /\.html$/,
               use: [
                 {
