@@ -16,3 +16,6 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+require('./js/demo/tictactoe/game');
+  
