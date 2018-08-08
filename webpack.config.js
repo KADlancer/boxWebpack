@@ -6,7 +6,7 @@ const cleanWebpackPlugin = new CleanWebpackPlugin('dist', {} )
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     hash: true,
-    template: "./src/index.html",
+    template: "./index.html",
     filename: "./index.html"
   });
 
