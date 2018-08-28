@@ -1,8 +1,16 @@
-import { configure } from '@storybook/react';
+import { configure, addDecorator } from '@storybook/react'
+//import { withInfo, setDefaults } from '@storybook/addon-info'
 
+//import './style.css'
+
+const req = require.context('../src/', true, /stories\.js$/)
 function loadStories() {
-  require('../stories/index.js');
-  // You can require as many stories as you need.
+  req.keys().forEach(req)
 }
 
-configure(loadStories, module);
+//setDefaults({
+//  inline: true,
+//})
+
+//addDecorator((story, context) => withInfo(context.kind)(story)(context))
+configure(loadStories, module)
