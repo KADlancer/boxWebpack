@@ -1,0 +1,11 @@
+body {
+  font-family: verdana, sans-serif;
+  background-color: moccasin;
+}
+
+h1, h2 {
+  color: black;
+}
+::placeholder {
+  color: gray;
+}
