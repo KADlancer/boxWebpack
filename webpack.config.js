@@ -2,6 +2,8 @@ const path = require('path');
 
 const resolve = require('./webpack/resolve.js');
 
+const devMode = process.env.NODE_ENV !== 'production'
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     hash: true,
@@ -11,10 +13,8 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const miniCssExtractPlugin = new MiniCssExtractPlugin({
-    // Options similar to the same options in webpackOptions.output
-    // both options are optional
-    filename: "[name].css",
-    chunkFilename: "[id].css",
+    filename: devMode ? '[name].css' : '[name].[hash].css',
+    chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
 });
 
 
@@ -57,11 +57,11 @@ module.exports = {
                 ],
             },
             {
-                test:/\.(s*)css$/,
-                use:[
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "postcss-loader",
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader',
                 ],
             },
         ],
