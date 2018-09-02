@@ -1,20 +1,21 @@
 {
   "name": "box-webpack",
   "version": "0.1.0",
+  "author": "Konrad Abe",
+  "license": "MIT",
   "description": "A small clean slate project to use as a base setup with reacth, webpack, storybooks and more",
   "main": "index.html",
-  "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KADlancer/boxWebpack.git"
   },
-  "author": "Konrad Abe",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/KADlancer/boxWebpack/issues"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode development",
+    "test": "test"
   },
   "homepage": "https://github.com/KADlancer/boxWebpack#readme",
   "devDependencies": {
