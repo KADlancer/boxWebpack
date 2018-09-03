@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-info": "^3.4.10",
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "^4.0.0-alpha.20",
     "babel-loader": "^8.0.1",
