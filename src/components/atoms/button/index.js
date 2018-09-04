@@ -1,6 +1,6 @@
-/* @flow */
 import * as React from 'react'
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
 
 import styles from './style.css'
 
@@ -21,19 +21,9 @@ export const ButtonSize = {
   LARGE: 'large',
 }
 
-type Props = {
-  type: string,
-  theme: string,
-  size: string,
-  onClick: Function,
-  children: React.Node,
-  className: string,
-  disabled: boolean,
-}
-
-const Button = (props: Props): React.Element<*> => {
+const Button = props => {
   const { type, onClick, children, theme, size, className, disabled } = props
-  const classProps: string = classnames(
+  const classProps = classnames(
     styles.button,
     styles[theme],
     styles[size],
@@ -50,13 +40,23 @@ const Button = (props: Props): React.Element<*> => {
   )
 }
 
+Button.propTypes = {
+	children: PropTypes.node,
+	className: PropTypes.string,
+	disabled: PropTypes.bool,
+	onClick: PropTypes.func,
+	size: PropTypes.string,
+	theme: PropTypes.string,
+	type: PropTypes.string,
+}
+
 Button.defaultProps = {
-  type: ButtonType.BUTTON,
-  theme: ButtonTheme.DEFAULT,
-  size: ButtonSize.MEDIUM,
-  onClick: () => {},
   className: '',
   disabled: false,
+  onClick: () => {},
+  size: ButtonSize.MEDIUM,
+  theme: ButtonTheme.DEFAULT,
+  type: ButtonType.BUTTON,
 }
 
 export default Button

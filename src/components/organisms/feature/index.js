@@ -1,16 +1,10 @@
-/* @flow */
 import * as React from 'react'
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
 
 import styles from './style.css'
 
-type Props = {
-  children?: React.Node,
-  className?: string,
-  image: string,
-}
-
-const Feature = (props: Props): React.Element<*> => (
+const Feature = props => (
   <div
     style={{ backgroundImage: `url(${props.image})` }}
     className={classnames(styles.feature, props.className)}
@@ -19,9 +13,15 @@ const Feature = (props: Props): React.Element<*> => (
   </div>
 )
 
+Feature.propTypes = {
+	children: PropTypes.node,
+	className: PropTypes.string,
+	image: PropTypes.string,
+}
+
 Feature.defaultProps = {
-  className: undefined,
   children: undefined,
+  className: undefined,
   image: '',
 }
 

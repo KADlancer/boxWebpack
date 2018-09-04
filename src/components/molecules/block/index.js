@@ -1,18 +1,11 @@
-/* @flow */
 import * as React from 'react'
+import PropTypes from 'prop-types'
 
 import Card from '_components/atoms/card'
 import Button from '_components/atoms/button'
 import Title from '_components/atoms/title'
 
-type Props = {
-  children?: React.Node,
-  className?: string,
-  title: string,
-  button?: string,
-}
-
-const Block = (props: Props): React.Element<*> => (
+const Block = props => (
   <Card className={props.className}>
     <Title>{props.title}</Title>
     {props.children}
@@ -20,11 +13,18 @@ const Block = (props: Props): React.Element<*> => (
   </Card>
 )
 
+Block.propTypes = {
+	button: PropTypes.string,
+	children: PropTypes.node,
+	className: PropTypes.string,
+	title: PropTypes.string,
+}
+
 Block.defaultProps = {
-  className: '',
-  children: '',
-  title: '',
   button: '',
+  children: '',
+  className: '',
+  title: '',
 }
 
 export default Block
