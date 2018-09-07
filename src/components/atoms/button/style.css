@@ -39,12 +39,11 @@
   background: #fff;
   border: 1px solid var(--brand);
   transition: color 0.3s ease, background 0.3s ease;
-
-  &:hover {
-    color: #fff;
-    background: var(--brand);
-  }
 }
+	.rounded:hover {
+		color: #fff;
+		background: var(--brand);
+	}
 
 /* Disabled */
 .disabled {
