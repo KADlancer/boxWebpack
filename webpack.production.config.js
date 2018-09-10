@@ -1,6 +1,6 @@
 const merge = require('webpack-merge');
 const WebpackStrip = require('strip-loader');
-const baseConfig = require('./webpack/webpack.config');
+const baseConfig = require('./webpack.config');
 
 const stripLoader = {
 	test: [/\.es6$/, /\.js$/],

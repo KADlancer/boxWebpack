@@ -1,5 +1,5 @@
 const path = require('path');
-const resolve = require('./resolve.js');
+const resolve = require('./webpack/resolve.js');
 
 module.exports = {
 	resolve: {
