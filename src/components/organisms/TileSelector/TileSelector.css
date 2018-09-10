@@ -2,6 +2,7 @@
 	background: #fff;
 	border: 1px solid #ccc;
 	display: flex;
+	flex-wrap: wrap;
 	padding: 5px;
 }
 .bx--tile {

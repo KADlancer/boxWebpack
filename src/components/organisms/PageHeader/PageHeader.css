@@ -1,0 +1,12 @@
+.PageHeader {
+	display: flex;
+	justify-content: space-between;
+}
+.PageHeader__Brackets{
+	display: flex;
+}
+
+
+.bx--list-box__menu {
+	max-height: 90vh;
+}

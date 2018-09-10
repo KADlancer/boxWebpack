@@ -1,43 +1,46 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import { SelectableTile } from 'carbon-components-react'
 
-import styles from './TileSelector.css'
+import data from './TileSelector.json'
+import './TileSelector.css'
+
+function handleClick() {
+	console.log("handleClick TileSelector: ", this)
+}
+function onChange() {
+	console.log("onChange TileSelector: ", this)
+}
+
+const listItems = data.tiles.map((item) =>
+	<SelectableTile
+		key={item.id}
+		id={item.id}
+		name="tiles"
+		selected={item.isSelected}
+		onChange={onChange}
+		handleClick={handleClick}
+	>
+		{item.text}
+	</SelectableTile>
+);
+
+ReactDOM.render(
+	<ul>{listItems}</ul>,
+	document.getElementById('root')
+);
 
 class TileSelector extends Component {
 	constructor(props) {
 		super(props);
 	}
 
-	handleClick() {
-		console.log("handleClick TileSelector: ", this)
-	};
+
 
 	render() {
 		return (
 			<div className="TileSelector">
-				<SelectableTile
-					id="tile-1"
-					name="tiles"
-					selected
-					handleClick={this.handleClick}
-				>
-					Multi-select Tile
-				</SelectableTile>
-				<SelectableTile
-					id="tile-2"
-					name="tiles"
-					handleClick={this.handleClick}
-				>
-					Multi-select Tile
-				</SelectableTile>
-				<SelectableTile
-					id="tile-3"
-					name="tiles"
-					selected
-					handleClick={this.handleClick}
-				>
-					Multi-select Tile
-				</SelectableTile>
+				{listItems}
 			</div>
 		);
 	}

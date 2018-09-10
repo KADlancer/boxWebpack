@@ -1,45 +1,8 @@
 import React, { Component } from 'react'
 import { DropdownV2, DropdownSkeleton, TooltipIcon } from 'carbon-components-react'
 
-
-
-const DDitemsDashboard = [
-	{
-		id: 'option-1',
-		text: 'Option 1',
-	},
-	{
-		id: 'option-2',
-		text: 'Option 2',
-	},
-	{
-		id: 'option-3',
-		text: 'Option 3',
-	},
-	{
-		id: 'option-4',
-		text: 'Option 4',
-	},
-];
-
-const DDitemsUser = [
-	{
-		id: 'option-1',
-		text: 'Option 1',
-	},
-	{
-		id: 'option-2',
-		text: 'Option 2',
-	},
-	{
-		id: 'option-3',
-		text: 'Option 3',
-	},
-	{
-		id: 'option-4',
-		text: 'Option 4',
-	},
-];
+import data from './PageHeader.json'
+import './PageHeader.css'
 
 class PageHeader extends Component {
 	constructor(props) {
@@ -49,26 +12,28 @@ class PageHeader extends Component {
 
 	render() {
 		return (
-			<div>
-				<span>Content Edit</span>
+			<div className="PageHeader">
+				<div className="PageHeader__Brackets">
+					<span>Content Edit</span>
 
-				<div style={{width: 300}}>
-					<DropdownV2
-						label="Dashboard"
-						items={DDitemsDashboard}
-						itemToString={item => (item ? item.text : '')}
-					/>
+					<div style={{width: 300}}>
+						<DropdownV2
+							label="Dashboard"
+							items={data.DDitemsDashboard}
+							itemToString={item => (item ? item.text : '')}
+						/>
+					</div>
+
+					<div style={{width: 300}}>
+						<DropdownV2
+							label="User"
+							items={data.DDitemsUser}
+							itemToString={item => (item ? item.text : '')}
+						/>
+					</div>
 				</div>
 
-				<div style={{width: 300}}>
-					<DropdownV2
-						label="User"
-						items={DDitemsUser}
-						itemToString={item => (item ? item.text : '')}
-					/>
-				</div>
-
-				<div>
+				<div className="PageHeader__Brackets">
 					<TooltipIcon tooltipText="Download Manual">
 						<svg width="16" height="12" viewBox="0 0 16 12">
 							<g fillRule="nonzero">

@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import {hot} from "react-hot-loader";
 import TileSelector from '../../organisms/TileSelector/TileSelector'
-import PageHeader from '../../organisms/PageHeader'
+import PageHeader from '../../organisms/PageHeader/PageHeader'
 
 import {
 	DataTable,
