@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import { Button } from 'carbon-components-react';
 
-storiesOf('— Atoms/CarbonButton', module)
+storiesOf('Atoms/CarbonButton', module)
   .add('default', () => (
 	  <div>
 		  <Button

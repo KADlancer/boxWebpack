@@ -6,7 +6,7 @@ import { checkA11y } from '@storybook/addon-a11y';
 
 import Button, { ButtonTheme, ButtonSize } from './'
 
-storiesOf('— Atoms/Button', module)
+storiesOf('Atoms/Button', module)
 	.addDecorator(checkA11y)
 	.add('default', () => <Button onClick={action('clicked')}>Learn more</Button>)
 	.add('default - small', () => (

@@ -53,7 +53,7 @@ const headers = [
 	},
 ];
 
-storiesOf('— Organisms/DataTable', module).add('default', () => (
+storiesOf('Organisms/DataTable', module).add('default', () => (
 	<DataTable
 		rows={initialRows}
 		headers={headers}

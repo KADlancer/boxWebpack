@@ -3,6 +3,6 @@ import { storiesOf } from '@storybook/react'
 
 import Dashboard from "./Dashboard";
 
-storiesOf('— Pages', module).add('Dashboard', () => (
+storiesOf('Views', module).add('Dashboard', () => (
   <Dashboard/>
 ))

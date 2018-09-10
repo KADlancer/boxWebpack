@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import Block from './'
 
-storiesOf('— Molecules/Block', module).add('default', () => (
+storiesOf('Molecules/Block', module).add('default', () => (
   <Block title="Atom" button="Learn more">
     <p>
       An atom is the smallest constituent unit of ordinary matter that has the properties of a

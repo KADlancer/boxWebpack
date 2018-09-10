@@ -14,30 +14,15 @@ module.exports = {
 				options: { presets: ['@babel/env'] }
 			},
 			{
-				test: /\.css$/,
-				use: [
-					{
-						loader: 'style-loader',
-					},
-					{
-						loader: 'css-loader',
-						options: {
-							modules: true,
-						},
-					},
-					{
-						loader: 'postcss-loader',
-					},
-				],
-			},
-
-			{
-				test: /\.scss$/,
+				test:/\.(s*)css$/,
 				use: [
 					{ loader: 'style-loader' },
 					{
 						loader: 'css-loader',
-						options: { importLoaders: 2 },
+						options: {
+							modules: false,
+							importLoaders: 2,
+						},
 					},
 					{
 						loader: 'postcss-loader',

@@ -1,0 +1,10 @@
+.TileSelector {
+	background: #fff;
+	border: 1px solid #ccc;
+	display: flex;
+	padding: 5px;
+}
+.bx--tile {
+	max-width: 140px;
+	margin: 5px;
+}
