@@ -1,5 +1,7 @@
 import React, { Component} from "react";
 import {hot} from "react-hot-loader";
+import TileSelector from '../../organisms/TileSelector'
+import PageHeader from '../../organisms/PageHeader'
 
 import {
 	DataTable,
@@ -61,6 +63,11 @@ class Dashboard extends Component{
 	render(){
 		return(
 			<div className="Dashboard">
+
+				<PageHeader />
+
+				<TileSelector/>
+
 				<h1> Hello Dashboard! </h1>
 				123
 				456
