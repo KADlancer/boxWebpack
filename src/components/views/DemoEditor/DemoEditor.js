@@ -58,10 +58,6 @@ class DemoEditor extends Component {
     render() {
         return (
             <div className="DemoEditor">
-                <PageHeader />
-
-                <TileSelector />
-
                 <DataTable
                     rows={initialRows}
                     headers={headers}
