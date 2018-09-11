@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import Segments from '../../molecules/Segments/Segments'
+import React, { Component } from "react";
+import Segments from "../../molecules/Segments/Segments";
 
-import './WidgetHelp.css'
+import "./WidgetHelp.css";
 
 class WidgetNotifications extends Component {
 	constructor(props) {
@@ -9,7 +9,7 @@ class WidgetNotifications extends Component {
 	}
 
 	render() {
-		let notifications = this.props.dataNotifications.map((item) =>
+		let notifications = this.props.dataNotifications.map(item => (
 			<Segments>
 				<Segments className="segment__header--attention">
 					<p>
@@ -20,10 +20,10 @@ class WidgetNotifications extends Component {
 					</p>
 				</Segments>
 				<Segments>
-					<div dangerouslySetInnerHTML={ {__html: item.text} } />
+        			<div dangerouslySetInnerHTML={{__html: item.text}} />
 				</Segments>
 			</Segments>
-		);
+		));
 		return (
 			<div className="WidgetNotifications">
 				<h2>Notifications</h2>

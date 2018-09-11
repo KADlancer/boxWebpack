@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import Segments from '../../molecules/Segments/Segments'
+import React, { Component } from "react";
+import Segments from "../../molecules/Segments/Segments";
 
-import './WidgetHelp.css'
+import "./WidgetHelp.css";
 
 class WidgetReleaseNotes extends Component {
 	constructor(props) {
@@ -9,7 +9,7 @@ class WidgetReleaseNotes extends Component {
 	}
 
 	render() {
-		let releaseNotes = this.props.dataReleaseNotes.map((item) =>
+		let releaseNotes = this.props.dataReleaseNotes.map(item => (
 			<Segments>
 				<Segments className="segment__header--success">
 					<p>
@@ -20,10 +20,10 @@ class WidgetReleaseNotes extends Component {
 					</p>
 				</Segments>
 				<Segments>
-					<div dangerouslySetInnerHTML={ {__html: item.text} } />
+        			<div dangerouslySetInnerHTML={{__html: item.text}} />
 				</Segments>
 			</Segments>
-		);
+		));
 		return (
 			<div className="WidgetReleaseNotes">
 				<h2>Release Notes</h2>

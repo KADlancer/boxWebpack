@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
-import { DropdownV2, DropdownSkeleton, TooltipIcon } from 'carbon-components-react'
+import React, { Component } from "react";
+import {
+    DropdownV2,
+    DropdownSkeleton,
+    TooltipIcon
+} from "carbon-components-react";
 
-import data from './PageHeader.json'
-import './PageHeader.css'
+import data from "./PageHeader.json";
+import "./PageHeader.css";
 
 class PageHeader extends Component {
 	constructor(props) {
 		super(props);
-
 	}
 
 	render() {

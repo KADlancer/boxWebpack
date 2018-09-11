@@ -1,12 +1,8 @@
-import React, { Component} from "react";
-import {hot} from "react-hot-loader";
-import PageHeader from '../../organisms/PageHeader/PageHeader'
-import TileSelector from '../../organisms/TileSelector/TileSelector'
-
-import {
-	DataTable
-} from 'carbon-components-react';
-
+import React, { Component } from "react";
+import { hot } from "react-hot-loader";
+import { DataTable } from "carbon-components-react";
+import PageHeader from "../../organisms/PageHeader/PageHeader";
+import TileSelector from "../../organisms/TileSelector/TileSelector";
 
 const {
 	TableContainer,
@@ -15,85 +11,86 @@ const {
 	TableRow,
 	TableBody,
 	TableCell,
-	TableHeader,
+	TableHeader
 } = DataTable;
 
 // Given that we have the following rows with the fields `foo`, `bar`, and `baz`
 const initialRows = [
 	{
-		id: 'a',
-		foo: 'Foo a',
-		bar: 'Bar a',
-		baz: 'Baz a',
+		id: "a",
+		foo: "Foo a",
+		bar: "Bar a",
+		baz: "Baz a"
 	},
 	{
-		id: 'b',
-		foo: 'Foo b',
-		bar: 'Bar b',
-		baz: 'Baz b',
+		id: "b",
+		foo: "Foo b",
+		bar: "Bar b",
+		baz: "Baz b"
 	},
 	{
-		id: 'c',
-		foo: 'Foo c',
-		bar: 'Bar c',
-		baz: 'Baz c',
-	},
+		id: "c",
+		foo: "Foo c",
+		bar: "Bar c",
+		baz: "Baz c"
+	}
 ];
 
 // We would have a headers array like the following
 const headers = [
 	{
 		// `key` is the name of the field on the row object itself for the header
-		key: 'foo',
+		key: "foo",
 		// `header` will be the name you want rendered in the Table Header
-		header: 'Foo',
+		header: "Foo"
 	},
 	{
-		key: 'bar',
-		header: 'Bar',
+		key: "bar",
+		header: "Bar"
 	},
 	{
-		key: 'baz',
-		header: 'Baz',
-	},
+		key: "baz",
+		header: "Baz"
+	}
 ];
 
-class DemoEditor extends Component{
-	render(){
-		return(
+class DemoEditor extends Component {
+	render() {
+		return (
 			<div className="DemoEditor">
+                <PageHeader />
 
-				<PageHeader />
+                <TileSelector />
 
-				<TileSelector/>
-
-				<DataTable
+        <DataTable
 					rows={initialRows}
-					headers={headers}
+    headers={headers}
 					render={({ rows, headers, getHeaderProps }) => (
 						<TableContainer title="DataTable">
-							<Table>
-								<TableHead>
-									<TableRow>
-										{headers.map(header => (
-											<TableHeader {...getHeaderProps({ header })}>
+                            <Table>
+                                <TableHead>
+    								<TableRow>
+                                        {headers.map(header => (
+    										<TableHeader
+                                                {...getHeaderProps({ header })}
+                                            >
 												{header.header}
 											</TableHeader>
 										))}
-									</TableRow>
+                                    </TableRow>
 								</TableHead>
 								<TableBody>
 									{rows.map(row => (
 										<TableRow key={row.id}>
-											{row.cells.map(cell => (
-												<TableCell key={cell.id}>
-													{cell.value}
-												</TableCell>
+                                            {row.cells.map(cell => (
+    											<TableCell key={cell.id}>
+                                                    {cell.value}
+                                                </TableCell>
 											))}
-										</TableRow>
+                                        </TableRow>
 									))}
 								</TableBody>
-							</Table>
+       						</Table>
 						</TableContainer>
 					)}
 				/>

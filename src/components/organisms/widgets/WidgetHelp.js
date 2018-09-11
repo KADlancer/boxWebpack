@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { Segments } from '../../molecules/Segments/Segments'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { Segments } from "../../molecules/Segments/Segments";
 
-import './WidgetHelp.css'
+import "./WidgetHelp.css";
 
 class WidgetHelp extends Component {
 	constructor(props) {
@@ -17,20 +17,27 @@ class WidgetHelp extends Component {
 					<div className="ui horizontal segments">
 						<div className="ui segment">
 							<a href="#">
-								<strong>User Manual</strong><br/>
-								Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+								<strong>User Manual</strong>
+								<br />
+								Pellentesque habitant morbi tristique senectus
+								et netus et malesuada fames ac turpis egestas.
 							</a>
 						</div>
 						<div className="ui segment">
 							<a href="#">
-								<strong>Feedback</strong><br/>
-								Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
+								<strong>Feedback</strong>
+								<br />
+								Vestibulum tortor quam, feugiat vitae, ultricies
+								eget, tempor sit amet, ante. Donec eu
 							</a>
 						</div>
 						<div className="ui segment">
 							<a href="#">
-								<strong>Shortcuts</strong><br/>
-								libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+								<strong>Shortcuts</strong>
+                                <br />
+								libero sit amet quam egestas semper. Aenean
+								ultricies mi vitae est. Mauris placerat eleifend
+								leo.
 							</a>
 						</div>
 					</div>

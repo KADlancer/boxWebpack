@@ -1,41 +1,39 @@
-import React, { Component} from "react";
-import {hot} from "react-hot-loader";
-import PageHeader from '../../organisms/PageHeader/PageHeader'
-import TileSelector from '../../organisms/TileSelector/TileSelector'
+import React, { Component } from "react";
+import { hot } from "react-hot-loader";
 
-import {
-	InlineNotification,
-} from 'carbon-components-react';
+import { InlineNotification } from "carbon-components-react";
 import WidgetHelp from "_components/organisms/widgets/WidgetHelp";
 import WidgetNotifications from "_components/organisms/widgets/WidgetNotifications";
 import WidgetReleaseNotes from "_components/organisms/widgets/WidgetReleaseNotes";
+import TileSelector from "../../organisms/TileSelector/TileSelector";
+import PageHeader from "../../organisms/PageHeader/PageHeader";
 
+import data from "./Dashboard.json";
 
-import data from './Dashboard.json'
-
-
-class Dashboard extends Component{
-	render(){
-		return(
-			<div className="Dashboard">
-
+class Dashboard extends Component {
+	render() {
+		return (
+            <div className="Dashboard">
 				<PageHeader />
 
-				<TileSelector tiles={data.tiles}/>
+				<TileSelector tiles={data.tiles} />
 
 				<div className="bx--grid">
-					<div className="bx--row">
-						<div className="bx--col-xs-12 bx--col-md-6">
-							<WidgetHelp/>
+                    <div className="bx--row">
+    					<div className="bx--col-xs-12 bx--col-md-6">
+							<WidgetHelp />
 
-							<WidgetNotifications dataNotifications={data.notifications}/>
+                            <WidgetNotifications
+                                dataNotifications={data.notifications}
+							/>
 						</div>
-						<div className="bx--col-xs-12 bx--col-md-6">
-							<WidgetReleaseNotes dataReleaseNotes={data.releaseNotes}/>
+                        <div className="bx--col-xs-12 bx--col-md-6">
+							<WidgetReleaseNotes
+                                dataReleaseNotes={data.releaseNotes}
+                            />
 						</div>
 					</div>
 				</div>
-
 			</div>
 		);
 	}

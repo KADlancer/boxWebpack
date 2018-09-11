@@ -1,37 +1,37 @@
-import React, { Component } from 'react'
-import {Button, SelectableTile} from 'carbon-components-react'
+import React, { Component } from "react";
+import { Button, SelectableTile } from "carbon-components-react";
 
-import './TileSelector.css'
+import "./TileSelector.css";
 import CarbonButton from "_components/atoms/carbonButton/CarbonButton";
 
 function handleClick() {
-	console.log("handleClick TileSelector: ", this)
+    console.log("handleClick TileSelector: ", this);
 }
 function onChange() {
-	console.log("onChange TileSelector: ", this)
+    console.log("onChange TileSelector: ", this);
 }
 
 class TileSelector extends Component {
-	constructor(props) {
-		super(props);
-	}
+    constructor(props) {
+        super(props);
+    }
 
-	render() {
-		let listItems = this.props.tiles.map((item) =>
-				<SelectableTile
-					key={item.id}
-					id={item.id}
-					name="tiles"
-					selected={item.isSelected}
-					onChange={onChange}
-					handleClick={handleClick}
-				>
-					{item.text}
-				</SelectableTile>
-			);
-		return (
-			<div className="TileSelector">
-				<div className="bx--grid">
+    render() {
+        let listItems = this.props.tiles.map(item => (
+			<SelectableTile
+				key={item.id}
+				id={item.id}
+				name="tiles"
+				selected={item.isSelected}
+                onChange={onChange}
+                handleClick={handleClick}
+			>
+                {item.text}
+			</SelectableTile>
+        ));
+        return (
+            <div className="TileSelector">
+                <div className="bx--grid">
 					<div className="bx--row">
 						<div className="bx--col-xs-10 bx--col-md-11">
 							<ul>{listItems}</ul>
