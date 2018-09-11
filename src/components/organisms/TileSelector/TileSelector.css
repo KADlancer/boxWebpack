@@ -1,14 +1,14 @@
 .TileSelector {
-	background: #fff;
-	border: 1px solid #ccc;
-	padding: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 .TileSelector ul {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 -5px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px 20px;
 }
 .bx--tile {
-	max-width: 140px;
-	margin: 5px;
+    max-width: 140px;
+    margin: 5px;
 }

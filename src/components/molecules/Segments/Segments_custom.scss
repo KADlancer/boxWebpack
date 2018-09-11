@@ -9,16 +9,16 @@
 *******************************/
 
 .ui.segment[class*="segment__header"] {
-	background: #efefef;
+    background: #efefef;
 }
 
 .ui.segment[class*="header--attention"] {
-	border-left: 4px solid $red;
+    border-left: 4px solid $red;
 }
 .ui.segment[class*="header--success"] {
-	border-left: 4px solid $green;
+    border-left: 4px solid $green;
 }
 
 .segment__header__date {
-	float: right;
+    float: right;
 }

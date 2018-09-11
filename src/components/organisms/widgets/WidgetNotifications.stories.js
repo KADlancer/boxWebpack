@@ -6,5 +6,5 @@ import WidgetNotifications from "./WidgetNotifications";
 import data from "./WidgetNotifications.json";
 
 storiesOf("Organisms/Widgets", module).add("notification", () => (
-	<WidgetNotifications dataNotifications={data.notifications} />
+    <WidgetNotifications dataNotifications={data.notifications} />
 ));
