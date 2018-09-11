@@ -8,7 +8,7 @@ setOptions({
 	url: 'https://github.com/KADlancer/boxWebpack',
 });
 
-import './style.css'
+import './style.scss'
 
 
 const req = require.context('../src/', true, /.*stor(y|ies)\.js$/);

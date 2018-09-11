@@ -3,6 +3,6 @@ import { storiesOf } from '@storybook/react'
 
 import WidgetHelp from './WidgetHelp'
 
-storiesOf('Organisms/WidgetHelp', module).add('default', () =>
+storiesOf('Organisms/Widgets', module).add('help', ()=>
 	<WidgetHelp/>
 )

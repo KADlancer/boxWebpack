@@ -1,63 +1,18 @@
 import React, { Component} from "react";
 import {hot} from "react-hot-loader";
-import TileSelector from '../../organisms/TileSelector/TileSelector'
 import PageHeader from '../../organisms/PageHeader/PageHeader'
+import TileSelector from '../../organisms/TileSelector/TileSelector'
 
 import {
-	DataTable,
 	InlineNotification,
 } from 'carbon-components-react';
+import WidgetHelp from "_components/organisms/widgets/WidgetHelp";
+import WidgetNotifications from "_components/organisms/widgets/WidgetNotifications";
+import WidgetReleaseNotes from "_components/organisms/widgets/WidgetReleaseNotes";
 
 
-const {
-	TableContainer,
-	Table,
-	TableHead,
-	TableRow,
-	TableBody,
-	TableCell,
-	TableHeader,
-} = DataTable;
+import data from './Dashboard.json'
 
-// Given that we have the following rows with the fields `foo`, `bar`, and `baz`
-const initialRows = [
-	{
-		id: 'a',
-		foo: 'Foo a',
-		bar: 'Bar a',
-		baz: 'Baz a',
-	},
-	{
-		id: 'b',
-		foo: 'Foo b',
-		bar: 'Bar b',
-		baz: 'Baz b',
-	},
-	{
-		id: 'c',
-		foo: 'Foo c',
-		bar: 'Bar c',
-		baz: 'Baz c',
-	},
-];
-
-// We would have a headers array like the following
-const headers = [
-	{
-		// `key` is the name of the field on the row object itself for the header
-		key: 'foo',
-		// `header` will be the name you want rendered in the Table Header
-		header: 'Foo',
-	},
-	{
-		key: 'bar',
-		header: 'Bar',
-	},
-	{
-		key: 'baz',
-		header: 'Baz',
-	},
-];
 
 class Dashboard extends Component{
 	render(){
@@ -66,42 +21,21 @@ class Dashboard extends Component{
 
 				<PageHeader />
 
-				<TileSelector/>
+				<TileSelector tiles={data.tiles}/>
 
-				<h1> Hello Dashboard! </h1>
-				123
-				456
-				<DataTable
-					rows={initialRows}
-					headers={headers}
-					render={({ rows, headers, getHeaderProps }) => (
-						<TableContainer title="DataTable">
-							<Table>
-								<TableHead>
-									<TableRow>
-										{headers.map(header => (
-											<TableHeader {...getHeaderProps({ header })}>
-												{header.header}
-											</TableHeader>
-										))}
-									</TableRow>
-								</TableHead>
-								<TableBody>
-									{rows.map(row => (
-										<TableRow key={row.id}>
-											{row.cells.map(cell => (
-												<TableCell key={cell.id}>
-													{cell.value}
-												</TableCell>
-											))}
-										</TableRow>
-									))}
-								</TableBody>
-							</Table>
-						</TableContainer>
-					)}
-				/>
-				789
+				<div className="bx--grid">
+					<div className="bx--row">
+						<div className="bx--col-xs-12 bx--col-md-6">
+							<WidgetHelp/>
+
+							<WidgetNotifications dataNotifications={data.notifications}/>
+						</div>
+						<div className="bx--col-xs-12 bx--col-md-6">
+							<WidgetReleaseNotes dataReleaseNotes={data.releaseNotes}/>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		);
 	}

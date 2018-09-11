@@ -1,119 +1,116 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-
-import './Segment.scss'
-import Button, {ButtonSize} from "_components/atoms/button";
-import {action} from "@storybook/addon-actions";
+import Segments from './Segments'
 
 storiesOf('Molecules/Segment', module)
 	.add('default', () => (
-		<div className="ui segment">
+		<Segments>
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
 				tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
 				semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</div>
+		</Segments>
 	))
 	.add('horizontal', () => (
-		<div className="ui horizontal segments">
-			<div className="ui segment">
+		<Segments className="horizontal">
+			<Segments>
 				<p>Pellent esque habitant morbi tristique egestas.</p>
-			</div>
-			<div className="ui segment">
+			</Segments>
+			<Segments>
 				<p>Vestibulum tortor quam, feugiat vitae, senectus et netus et malesuada fames ac turpis ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
-			</div>
-			<div className="ui segment">
+			</Segments>
+			<Segments>
 				<p>Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-			</div>
-		</div>
+			</Segments>
+		</Segments>
 	))
 	.add('raised', () => (
-		<div className="ui raised segment">
+		<Segments className="raised">
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
 				tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
 				semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</div>
+		</Segments>
 	))
 	.add('stacked', () => (
-		<div className="ui stacked segment">
+		<Segments className="stacked">
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
 				tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
 				semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</div>
+		</Segments>
 	))
 	.add('tall stacked', () => (
-		<div className="ui tall stacked segment">
+		<Segments className="tall stacked">
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
 				tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
 				semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</div>
+		</Segments>
 	))
-	.add('grouped segments', () => (
-		<div className="ui segments">
-			<div className="ui segment">
+	.add('grouped', () => (
+		<Segments>
+			<Segments>
 				<p>Top</p>
-			</div>
-			<div className="ui segment">
+			</Segments>
+			<Segments>
 				<p>Middle</p>
-			</div>
-			<div className="ui segment">
+			</Segments>
+			<Segments>
 				<p>Middle</p>
-			</div>
-			<div className="ui segment">
+			</Segments>
+			<Segments>
 				<p>Middle</p>
-			</div>
-			<div className="ui segment">
+			</Segments>
+			<Segments>
 				<p>Bottom</p>
-			</div>
-		</div>
+			</Segments>
+		</Segments>
 	))
-	.add('nested segments', () => (
-		<div className="ui segments">
-			<div className="ui segment">
+	.add('nested grouped', () => (
+		<Segments>
+			<Segments>
 				<p>Top</p>
-			</div>
-			<div className="ui segments">
-				<div className="ui segment">
+			</Segments>
+			<Segments>
+				<Segments>
 					<p>Nested Top</p>
-				</div>
-				<div className="ui segment">
+				</Segments>
+				<Segments>
 					<p>Nested Middle</p>
-				</div>
-				<div className="ui segment">
+				</Segments>
+				<Segments>
 					<p>Nested Bottom</p>
-				</div>
-			</div>
-			<div className="ui segment">
+				</Segments>
+			</Segments>
+			<Segments>
 				<p>Middle</p>
-			</div>
-			<div className="ui horizontal segments">
-				<div className="ui segment">
+			</Segments>
+			<Segments className="horizontal">
+				<Segments>
 					<p>Top</p>
-				</div>
-				<div className="ui segment">
+				</Segments>
+				<Segments>
 					<p>Middle</p>
-				</div>
-				<div className="ui segment">
+				</Segments>
+				<Segments>
 					<p>Bottom</p>
-				</div>
-			</div>
-			<div className="ui segment">
+				</Segments>
+			</Segments>
+			<Segments>
 				<p>Middle</p>
-			</div>
-			<div className="ui segments">
-				<div className="ui horizontal segments">
-					<div className="ui segment">
+			</Segments>
+			<Segments>
+				<Segments className="horizontal">
+					<Segments>
 						<p>Top</p>
-					</div>
-					<div className="ui segment">
+					</Segments>
+					<Segments>
 						<p>Middle</p>
-					</div>
-					<div className="ui segment">
+					</Segments>
+					<Segments>
 						<p>Bottom</p>
-					</div>
-				</div>
-			</div>
-			<div className="ui segment">
+					</Segments>
+				</Segments>
+			</Segments>
+			<Segments>
 				<p>Bottom</p>
-			</div>
-		</div>
+			</Segments>
+		</Segments>
 	))

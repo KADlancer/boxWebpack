@@ -16,7 +16,7 @@ class PageHeader extends Component {
 				<div className="PageHeader__Brackets">
 					<span>Content Edit</span>
 
-					<div style={{width: 300}}>
+					<div style={{width: 180}}>
 						<DropdownV2
 							label="Dashboard"
 							items={data.DDitemsDashboard}
@@ -24,7 +24,7 @@ class PageHeader extends Component {
 						/>
 					</div>
 
-					<div style={{width: 300}}>
+					<div style={{width: 180}}>
 						<DropdownV2
 							label="User"
 							items={data.DDitemsUser}
@@ -35,28 +35,18 @@ class PageHeader extends Component {
 
 				<div className="PageHeader__Brackets">
 					<TooltipIcon tooltipText="Download Manual">
-						<svg width="16" height="12" viewBox="0 0 16 12">
-							<g fillRule="nonzero">
-								<path d="M8.05 2a2.5 2.5 0 0 1 4.9 0H16v1h-3.05a2.5 2.5 0 0 1-4.9 0H0V2h8.05zm2.45 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM3.05 9a2.5 2.5 0 0 1 4.9 0H16v1H7.95a2.5 2.5 0 0 1-4.9 0H0V9h3.05zm2.45 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-							</g>
+						<svg className="icon" width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
+							<use xlinkHref="document.svg"/>
 						</svg>
 					</TooltipIcon>
 					<TooltipIcon tooltipText="Support">
-						<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-							<g fill-rule="evenodd">
-								<path
-									d="M8 14.5a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13zM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
-									fill-rule="nonzero"/>
-								<path fill-rule="nonzero" d="M9 13H7V7h2z"/>
-								<circle cx="8" cy="4" r="1"/>
-							</g>
+						<svg className="icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+							<use xlinkHref="chat.svg"/>
 						</svg>
 					</TooltipIcon>
 					<TooltipIcon tooltipText="Keyboard Shortcuts">
-						<svg width="16" height="12" viewBox="0 0 16 12">
-							<g fillRule="nonzero">
-								<path d="M8.05 2a2.5 2.5 0 0 1 4.9 0H16v1h-3.05a2.5 2.5 0 0 1-4.9 0H0V2h8.05zm2.45 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM3.05 9a2.5 2.5 0 0 1 4.9 0H16v1H7.95a2.5 2.5 0 0 1-4.9 0H0V9h3.05zm2.45 2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-							</g>
+						<svg className="icon" width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
+							<use xlinkHref="filter.svg"/>
 						</svg>
 					</TooltipIcon>
 					<div>

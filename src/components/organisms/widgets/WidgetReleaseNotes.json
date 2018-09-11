@@ -1,0 +1,22 @@
+{
+  "releaseNotes": [
+    {
+      "id": "releaseNote-1",
+      "date": "15.01.1982",
+      "label": "Release Note 1",
+      "text": "Release Note 1"
+    },
+    {
+      "id": "releaseNote-2",
+      "date": "15.01.1982",
+      "label": "Release Note 2",
+      "text": "Release Note 2"
+    },
+    {
+      "id": "releaseNote-3",
+      "date": "15.01.1982",
+      "label": "Release Note 3",
+      "text": "Release Note 3"
+    }
+  ]
+}

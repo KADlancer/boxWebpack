@@ -1,0 +1,22 @@
+{
+  "notifications": [
+    {
+      "id": "notification-1",
+      "date": "15.01.1982",
+      "label": "Notification 1",
+      "text": "Notification 1"
+    },
+    {
+      "id": "notification-2",
+      "date": "15.01.1982",
+      "label": "Notification 2",
+      "text": "Notification 2"
+    },
+    {
+      "id": "notification-3",
+      "date": "15.01.1982",
+      "label": "Notification 3",
+      "text": "Notification 3"
+    }
+  ]
+}
