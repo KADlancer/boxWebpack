@@ -1,0 +1,28 @@
+{
+  "globals": {
+    "BACKEND_URL": true,
+    "MEDIA_URL": true,
+    "LOGIN_URL": true
+  },
+
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "curly": ["error", "all"],
+    "max-len": ["error", 130],
+    "indent": ["error", 4, {"SwitchCase": 1}],
+    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
+    "react/forbid-prop-types": [false],
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-indent-props": ["error", 4],
+    "jsx-a11y/no-static-element-interactions": [false],
+    "jsx-a11y/click-events-have-key-events": [false],
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["to", "hrefLeft", "hrefRight"],
+      "aspects": ["noHref", "invalidHref", "preferButton"]
+    }]
+  },
+  "extends": ["airbnb", "plugin:prettier/recommended"]
+}
