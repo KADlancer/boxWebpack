@@ -17,7 +17,7 @@ class TileSelector extends Component {
     }
 
     render() {
-        let listItems = this.props.tiles.map(item => (
+        const listItems = this.props.tiles.map(item => (
             <SelectableTile
                 key={item.id}
                 id={item.id}
@@ -37,9 +37,7 @@ class TileSelector extends Component {
                             <ul>{listItems}</ul>
                         </div>
                         <div className="bx--col-xs-2 bx--col-md-1">
-                            <div className="button--edit">
-                                edit
-                            </div>
+                            <div className="button--edit">edit</div>
                         </div>
                         <div className="bx--col-xs-12">
                             <CarbonButton buttonType="primary" iconType="v">

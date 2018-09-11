@@ -9,7 +9,7 @@ class WidgetNotifications extends Component {
     }
 
     render() {
-        let notifications = this.props.dataNotifications.map(item => (
+        const notifications = this.props.dataNotifications.map(item => (
             <Segments>
                 <Segments className="segment__header--attention">
                     <p>
@@ -20,7 +20,7 @@ class WidgetNotifications extends Component {
                     </p>
                 </Segments>
                 <Segments>
-                    <div dangerouslySetInnerHTML={{__html: item.text}} />
+                    <div dangerouslySetInnerHTML={{ __html: item.text }} />
                 </Segments>
             </Segments>
         ));

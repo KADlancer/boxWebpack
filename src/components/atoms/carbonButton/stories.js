@@ -5,38 +5,28 @@ import { Button } from "carbon-components-react";
 import CarbonButton from "./CarbonButton";
 
 storiesOf("Atoms/CarbonButton", module)
-    .add('default', () => (
-        <Button className="some-class">
-            Primary button
-        </Button>
+    .add("default", () => (
+        <Button className="some-class">Primary button</Button>
     ))
-    .add('secondary', () => (
-        <Button
-            kind="secondary"
-            className="some-class"
-        >
+    .add("secondary", () => (
+        <Button kind="secondary" className="some-class">
             Secondary button
         </Button>
     ))
-    .add('grouped', () => (
+    .add("grouped", () => (
         <div>
-            <Button
-                kind="secondary"
-                className="some-class"
-            >
+            <Button kind="secondary" className="some-class">
                 Secondary button
             </Button>
-            <Button className="some-class">
-                Primary button
-            </Button>
+            <Button className="some-class">Primary button</Button>
         </div>
     ))
-    .add('primary with icon', () => (
+    .add("primary with icon", () => (
         <CarbonButton buttonType="primary" iconType="v">
             Update
         </CarbonButton>
     ))
-    .add('secondary with icon', () => (
+    .add("secondary with icon", () => (
         <CarbonButton buttonType="secondary" iconType="X">
             Cancel
         </CarbonButton>

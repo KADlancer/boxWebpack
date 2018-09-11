@@ -62,9 +62,9 @@ class DemoEditor extends Component {
 
                 <TileSelector />
 
-        <DataTable
+                <DataTable
                     rows={initialRows}
-    headers={headers}
+                    headers={headers}
                     render={({ rows, headers, getHeaderProps }) => (
                         <TableContainer title="DataTable">
                             <Table>
@@ -90,7 +90,7 @@ class DemoEditor extends Component {
                                         </TableRow>
                                     ))}
                                 </TableBody>
-                               </Table>
+                            </Table>
                         </TableContainer>
                     )}
                 />

@@ -9,7 +9,7 @@ class WidgetReleaseNotes extends Component {
     }
 
     render() {
-        let releaseNotes = this.props.dataReleaseNotes.map(item => (
+        const releaseNotes = this.props.dataReleaseNotes.map(item => (
             <Segments>
                 <Segments className="segment__header--success">
                     <p>
@@ -20,7 +20,7 @@ class WidgetReleaseNotes extends Component {
                     </p>
                 </Segments>
                 <Segments>
-                    <div dangerouslySetInnerHTML={{__html: item.text}} />
+                    <div dangerouslySetInnerHTML={{ __html: item.text }} />
                 </Segments>
             </Segments>
         ));
