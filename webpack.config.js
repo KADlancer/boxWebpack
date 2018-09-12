@@ -5,7 +5,7 @@ const baseConfig = require('./webpack.base.config');
 
 module.exports = merge(baseConfig, {
 	mode: 'development',
-	entry: "./src/index.js",
+	entry: "./src/index.jsx",
 	output: {
 		path: path.resolve(__dirname, "dist/"),
 		publicPath: "/dist/",

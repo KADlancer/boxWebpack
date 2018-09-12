@@ -14,9 +14,7 @@ class WidgetReleaseNotes extends Component {
                 <Segments className="segment__header--success">
                     <p>
                         {item.label}
-                        <span className="segment__header__date">
-                            {item.date}
-                        </span>
+                        <span className="segment__header__date">{item.date}</span>
                     </p>
                 </Segments>
                 <Segments>

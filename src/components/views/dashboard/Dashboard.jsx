@@ -23,14 +23,10 @@ class Dashboard extends Component {
                         <div className="bx--col-xs-12 bx--col-md-6">
                             <WidgetHelp />
 
-                            <WidgetNotifications
-                                dataNotifications={data.notifications}
-                            />
+                            <WidgetNotifications dataNotifications={data.notifications} />
                         </div>
                         <div className="bx--col-xs-12 bx--col-md-6">
-                            <WidgetReleaseNotes
-                                dataReleaseNotes={data.releaseNotes}
-                            />
+                            <WidgetReleaseNotes dataReleaseNotes={data.releaseNotes} />
                         </div>
                     </div>
                 </div>

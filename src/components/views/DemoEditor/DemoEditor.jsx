@@ -4,15 +4,7 @@ import { DataTable } from "carbon-components-react";
 import PageHeader from "../../organisms/PageHeader/PageHeader";
 import TileSelector from "../../organisms/TileSelector/TileSelector";
 
-const {
-    TableContainer,
-    Table,
-    TableHead,
-    TableRow,
-    TableBody,
-    TableCell,
-    TableHeader
-} = DataTable;
+const { TableContainer, Table, TableHead, TableRow, TableBody, TableCell, TableHeader } = DataTable;
 
 // Given that we have the following rows with the fields `foo`, `bar`, and `baz`
 const initialRows = [
@@ -67,9 +59,7 @@ class DemoEditor extends Component {
                                 <TableHead>
                                     <TableRow>
                                         {headers.map(header => (
-                                            <TableHeader
-                                                {...getHeaderProps({ header })}
-                                            >
+                                            <TableHeader {...getHeaderProps({ header })}>
                                                 {header.header}
                                             </TableHeader>
                                         ))}
@@ -79,9 +69,7 @@ class DemoEditor extends Component {
                                     {rows.map(row => (
                                         <TableRow key={row.id}>
                                             {row.cells.map(cell => (
-                                                <TableCell key={cell.id}>
-                                                    {cell.value}
-                                                </TableCell>
+                                                <TableCell key={cell.id}>{cell.value}</TableCell>
                                             ))}
                                         </TableRow>
                                     ))}

@@ -18,7 +18,7 @@
     "buildProd": "webpack --config webpack.production.config.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "lint": "eslint src",
-    "fix": "eslint --fix src",
+    "fix": "eslint --fix src --ext .jsx,.js",
     "test": "test"
   },
   "homepage": "https://github.com/KADlancer/boxWebpack#readme",

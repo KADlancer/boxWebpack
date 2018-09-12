@@ -14,9 +14,7 @@ class WidgetNotifications extends Component {
                 <Segments className="segment__header--attention">
                     <p>
                         {item.label}
-                        <span className="segment__header__date">
-                            {item.date}
-                        </span>
+                        <span className="segment__header__date">{item.date}</span>
                     </p>
                 </Segments>
                 <Segments>

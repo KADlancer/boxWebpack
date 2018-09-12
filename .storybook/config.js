@@ -11,7 +11,7 @@ setOptions({
 import './style.scss'
 
 
-const req = require.context('../src/', true, /.*stor(y|ies)\.js$/);
+const req = require.context('../src/', true, /.*stor(y|ies)\.(js|jsx)$/);
 function loadStories() {
 	req.keys().forEach(filename => req(filename));
 }
