@@ -27,7 +27,7 @@
     }],
     "jsx-a11y/click-events-have-key-events": [false],
     "jsx-a11y/no-static-element-interactions": [false],
-    "max-len": ["error", 100],
+    "max-len": ["warn", 100],
     "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
     "quotes": ["error", "single"],
     "react/forbid-prop-types": [false],

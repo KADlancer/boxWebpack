@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import Segments from '../../molecules/Segments/Segments'
 
 import './WidgetHelp.css'
+import PropTypes from 'prop-types'
+import Segments from '../../molecules/Segments/Segments'
 
 class WidgetNotifications extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
-        const notifications = this.props.dataNotifications.map(item => (
+        const dataNotifications = this.props.dataNotifications
+        const notifications = dataNotifications.map(item => (
             <Segments>
                 <Segments className="segment__header--attention">
                     <p>
@@ -29,6 +27,10 @@ class WidgetNotifications extends Component {
             </div>
         )
     }
+}
+
+WidgetNotifications.propTypes = {
+    dataNotifications: PropTypes.object.isRequired,
 }
 
 export default WidgetNotifications

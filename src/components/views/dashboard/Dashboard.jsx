@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
 
-import { InlineNotification } from 'carbon-components-react'
-import WidgetHelp from '_components/organisms/widgets/WidgetHelp'
-import WidgetNotifications from '_components/organisms/widgets/WidgetNotifications'
-import WidgetReleaseNotes from '_components/organisms/widgets/WidgetReleaseNotes'
+import WidgetHelp from '../../organisms/widgets/WidgetHelp'
+import WidgetNotifications from '../../organisms/widgets/WidgetNotifications'
+import WidgetReleaseNotes from '../../organisms/widgets/WidgetReleaseNotes'
 import TileSelector from '../../organisms/TileSelector/TileSelector'
 import PageHeader from '../../organisms/PageHeader/PageHeader'
 

@@ -30,7 +30,7 @@ const initialRows = [
 ]
 
 // We would have a headers array like the following
-const headers = [
+const initialHeaders = [
     {
         // `key` is the name of the field on the row object itself for the header
         key: 'foo',
@@ -50,7 +50,7 @@ const headers = [
 storiesOf('Organisms/DataTable', module).add('default', () => (
     <DataTable
         rows={initialRows}
-        headers={headers}
+        headers={initialHeaders}
         render={({ rows, headers, getHeaderProps }) => (
             <TableContainer title="DataTable">
                 <Table>

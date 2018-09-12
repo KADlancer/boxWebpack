@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Segments from '../../molecules/Segments/Segments'
 
 import './WidgetHelp.css'
 
 class WidgetReleaseNotes extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
-        const releaseNotes = this.props.dataReleaseNotes.map(item => (
+        const dataReleasNotes = this.props.dataReleaseNotes
+        const releaseNotes = dataReleasNotes.map(item => (
             <Segments>
                 <Segments className="segment__header--success">
                     <p>
@@ -29,6 +27,10 @@ class WidgetReleaseNotes extends Component {
             </div>
         )
     }
+}
+
+WidgetReleaseNotes.propTypes = {
+    dataReleaseNotes: PropTypes.object.isRequired,
 }
 
 export default WidgetReleaseNotes

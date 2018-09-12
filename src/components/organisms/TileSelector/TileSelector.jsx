@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Button, SelectableTile } from 'carbon-components-react'
+import { SelectableTile, Button } from 'carbon-components-react'
 
 import './TileSelector.css'
-import CarbonButton from '_components/atoms/carbonButton/CarbonButton'
+import PropTypes from 'prop-types'
 
 function handleClick() {
     console.log('handleClick TileSelector: ', this)
@@ -12,12 +12,9 @@ function onChange() {
 }
 
 class TileSelector extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
-        const listItems = this.props.tiles.map(item => (
+        const tiles = this.props.tiles
+        const listItems = tiles.map(item => (
             <SelectableTile
                 key={item.id}
                 id={item.id}
@@ -40,18 +37,22 @@ class TileSelector extends Component {
                             <div className="button--edit">edit</div>
                         </div>
                         <div className="bx--col-xs-12">
-                            <CarbonButton buttonType="primary" iconType="v">
-                                Update
-                            </CarbonButton>
-                            <CarbonButton buttonType="secondary" iconType="X">
-                                Cancel
-                            </CarbonButton>
+                            <Button>
+                                [v] Update
+                            </Button>
+                            <Button kind="secondary">
+                                [X] Cancel
+                            </Button>
                         </div>
                     </div>
                 </div>
             </div>
         )
     }
+}
+
+TileSelector.propTypes = {
+    tiles: PropTypes.object.isRequired,
 }
 
 export default TileSelector

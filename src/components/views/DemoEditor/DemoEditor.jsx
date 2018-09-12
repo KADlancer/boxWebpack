@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
 import { DataTable } from 'carbon-components-react'
-import PageHeader from '../../organisms/PageHeader/PageHeader'
-import TileSelector from '../../organisms/TileSelector/TileSelector'
 
 const {
     TableContainer, Table, TableHead, TableRow, TableBody, TableCell, TableHeader,
@@ -31,7 +29,7 @@ const initialRows = [
 ]
 
 // We would have a headers array like the following
-const headers = [
+const initialHeaders = [
     {
         // `key` is the name of the field on the row object itself for the header
         key: 'foo',
@@ -54,7 +52,7 @@ class DemoEditor extends Component {
             <div className="DemoEditor">
                 <DataTable
                     rows={initialRows}
-                    headers={headers}
+                    headers={initialHeaders}
                     render={({ rows, headers, getHeaderProps }) => (
                         <TableContainer title="DataTable">
                             <Table>
