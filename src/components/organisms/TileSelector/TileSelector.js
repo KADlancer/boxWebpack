@@ -37,12 +37,8 @@ class TileSelector extends Component {
                             <div className="button--edit">edit</div>
                         </div>
                         <div className="bx--col-xs-12">
-                            <Button>
-                                [v] Update
-                            </Button>
-                            <Button kind="secondary">
-                                [X] Cancel
-                            </Button>
+                            <Button>[v] Update</Button>
+                            <Button kind="secondary">[X] Cancel</Button>
                         </div>
                     </div>
                 </div>

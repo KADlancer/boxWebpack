@@ -3,9 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import { DataTable } from 'carbon-components-react'
 
-const {
-    TableContainer, Table, TableHead, TableRow, TableBody, TableCell, TableHeader,
-} = DataTable
+const { TableContainer, Table, TableHead, TableRow, TableBody, TableCell, TableHeader } = DataTable
 
 // Given that we have the following rows with the fields `foo`, `bar`, and `baz`
 const initialRows = [

@@ -7,7 +7,12 @@
   "env": {
     "browser": true
   },
-  "extends": ["airbnb"],
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "prettier/standard"
+  ],
   "rules": {
     "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
     "comma-dangle": ["error", {
