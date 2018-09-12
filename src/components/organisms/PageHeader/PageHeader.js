@@ -1,12 +1,8 @@
-import React, { Component } from "react";
-import {
-    DropdownV2,
-    DropdownSkeleton,
-    TooltipIcon
-} from "carbon-components-react";
+import React, { Component } from 'react';
+import { DropdownV2, DropdownSkeleton, TooltipIcon } from 'carbon-components-react';
 
-import data from "./PageHeader.json";
-import "./PageHeader.css";
+import data from './PageHeader.json';
+import './PageHeader.css';
 
 class PageHeader extends Component {
     constructor(props) {
@@ -23,7 +19,7 @@ class PageHeader extends Component {
                         <DropdownV2
                             label="Dashboard"
                             items={data.DDitemsDashboard}
-                            itemToString={item => (item ? item.text : "")}
+                            itemToString={item => (item ? item.text : '')}
                         />
                     </div>
 
@@ -31,7 +27,7 @@ class PageHeader extends Component {
                         <DropdownV2
                             label="User"
                             items={data.DDitemsUser}
-                            itemToString={item => (item ? item.text : "")}
+                            itemToString={item => (item ? item.text : '')}
                         />
                     </div>
                 </div>
@@ -76,9 +72,7 @@ class PageHeader extends Component {
                     </TooltipIcon>
                     &nbsp;&nbsp;
                     <div>
-                        <span className="icon icon-large icon-audi">
-                            The World of Audi
-                        </span>
+                        <span className="icon icon-large icon-audi">The World of Audi</span>
                     </div>
                     &nbsp;&nbsp;
                 </div>

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Button } from "carbon-components-react";
+import React, { Component } from 'react';
+import { Button } from 'carbon-components-react';
 
 class CarbonButton extends Component {
     constructor(props) {
@@ -7,7 +7,7 @@ class CarbonButton extends Component {
     }
 
     render() {
-        let type = "";
+        let type = '';
         if (this.props.buttonType) {
             type = this.props.buttonType;
         }
@@ -16,7 +16,7 @@ class CarbonButton extends Component {
 
         return (
             <Button kind={type} className={this.props.className}>
-                {this.props.iconType ? `[${this.props.iconType}] ` : ""}
+                {this.props.iconType ? `[${this.props.iconType}] ` : ''}
                 {children}
             </Button>
         );

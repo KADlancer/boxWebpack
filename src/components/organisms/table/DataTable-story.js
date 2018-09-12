@@ -1,59 +1,51 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import { DataTable } from "carbon-components-react";
+import { DataTable } from 'carbon-components-react';
 
-const {
-    TableContainer,
-    Table,
-    TableHead,
-    TableRow,
-    TableBody,
-    TableCell,
-    TableHeader
-} = DataTable;
+const { TableContainer, Table, TableHead, TableRow, TableBody, TableCell, TableHeader } = DataTable;
 
 // Given that we have the following rows with the fields `foo`, `bar`, and `baz`
 const initialRows = [
     {
-        id: "a",
-        foo: "Foo a",
-        bar: "Bar a",
-        baz: "Baz a"
+        id: 'a',
+        foo: 'Foo a',
+        bar: 'Bar a',
+        baz: 'Baz a'
     },
     {
-        id: "b",
-        foo: "Foo b",
-        bar: "Bar b",
-        baz: "Baz b"
+        id: 'b',
+        foo: 'Foo b',
+        bar: 'Bar b',
+        baz: 'Baz b'
     },
     {
-        id: "c",
-        foo: "Foo c",
-        bar: "Bar c",
-        baz: "Baz c"
-    }
+        id: 'c',
+        foo: 'Foo c',
+        bar: 'Bar c',
+        baz: 'Baz c'
+    },
 ];
 
 // We would have a headers array like the following
 const headers = [
     {
         // `key` is the name of the field on the row object itself for the header
-        key: "foo",
+        key: 'foo',
         // `header` will be the name you want rendered in the Table Header
-        header: "Foo"
+        header: 'Foo'
     },
     {
-        key: "bar",
-        header: "Bar"
+        key: 'bar',
+        header: 'Bar'
     },
     {
-        key: "baz",
-        header: "Baz"
-    }
+        key: 'baz',
+        header: 'Baz'
+    },
 ];
 
-storiesOf("Organisms/DataTable", module).add("default", () => (
+storiesOf('Organisms/DataTable', module).add('default', () => (
     <DataTable
         rows={initialRows}
         headers={headers}
@@ -73,9 +65,7 @@ storiesOf("Organisms/DataTable", module).add("default", () => (
                         {rows.map(row => (
                             <TableRow key={row.id}>
                                 {row.cells.map(cell => (
-                                    <TableCell key={cell.id}>
-                                        {cell.value}
-                                    </TableCell>
+                                    <TableCell key={cell.id}>{cell.value}</TableCell>
                                 ))}
                             </TableRow>
                         ))}

@@ -1,10 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 
 class Clock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            time: new Date().toLocaleTimeString()
+            time: new Date().toLocaleTimeString(),
         };
     }
 
@@ -18,7 +18,7 @@ class Clock extends React.Component {
 
     tick() {
         this.setState({
-            time: new Date().toLocaleTimeString()
+            time: new Date().toLocaleTimeString(),
         });
     }
 
@@ -26,7 +26,7 @@ class Clock extends React.Component {
         return (
             <p className="App-clock">
                 The time is&nbsp;
-                {this.state.time}.
+                {this.state.time}
             </p>
         );
     }

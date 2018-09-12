@@ -1,6 +1,6 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import PageHeader from "./PageHeader";
+import PageHeader from './PageHeader';
 
-storiesOf("Organisms/PageHeader", module).add("default", () => <PageHeader />);
+storiesOf('Organisms/PageHeader', module).add('default', () => <PageHeader />);
