@@ -1,36 +1,38 @@
 {
-  "extends": ["airbnb", "plugin:prettier/recommended"],
   "globals": {
     "BACKEND_URL": true,
     "MEDIA_URL": true,
     "LOGIN_URL": true
   },
-
   "env": {
     "browser": true
   },
+  "extends": ["airbnb", "plugin:prettier/recommended"],
   "rules": {
-    "curly": ["error", "all"],
+    "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
     "comma-dangle": ["error", {
       "arrays": "always-multiline",
-      "objects": "always-multiline",
-      "imports": "always-multiline",
       "exports": "always-multiline",
+      "imports": "always-multiline",
+      "objects": "always-multiline",
       "functions": "ignore"
     }],
-    "max-len": ["error", 100],
+    "curly": ["error", "all"],
+    "import/no-cycle": [2, { "maxDepth": 1 }],
     "indent": ["error", 4, {"SwitchCase": 1}],
-    "quotes": ["error", "single"],
-    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
-    "react/forbid-prop-types": [false],
-    "react/jsx-indent": ["error", 4],
-    "react/jsx-indent-props": ["error", 4],
-    "jsx-a11y/no-static-element-interactions": [false],
-    "jsx-a11y/click-events-have-key-events": [false],
     "jsx-a11y/anchor-is-valid": ["error", {
       "components": ["Link"],
       "specialLink": ["to", "hrefLeft", "hrefRight"],
       "aspects": ["noHref", "invalidHref", "preferButton"]
-    }]
+    }],
+    "jsx-a11y/click-events-have-key-events": [false],
+    "jsx-a11y/no-static-element-interactions": [false],
+    "max-len": ["error", 100],
+    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
+    "quotes": ["error", "single"],
+    "react/forbid-prop-types": [false],
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-indent-props": ["error", 4],
+    "semi": ["error", "never"]
   }
 }

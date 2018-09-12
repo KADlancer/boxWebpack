@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { Segments } from '../../molecules/Segments/Segments';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import { Segments } from '../../molecules/Segments/Segments'
 
-import './WidgetHelp.css';
+import './WidgetHelp.css'
 
 class WidgetHelp extends Component {
     constructor(props) {
-        super(props);
+        super(props)
     }
 
     render() {
@@ -42,8 +42,8 @@ class WidgetHelp extends Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default WidgetHelp;
+export default WidgetHelp

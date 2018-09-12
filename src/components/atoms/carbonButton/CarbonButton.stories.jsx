@@ -1,8 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 
-import { Button } from 'carbon-components-react';
-import CarbonButton from './CarbonButton';
+import { Button } from 'carbon-components-react'
+import CarbonButton from './CarbonButton'
 
 storiesOf('Atoms/CarbonButton', module)
     .add('default', () => <Button className="some-class">Primary button</Button>)
@@ -28,4 +28,4 @@ storiesOf('Atoms/CarbonButton', module)
         <CarbonButton buttonType="secondary" iconType="X">
             Cancel
         </CarbonButton>
-    ));
+    ))

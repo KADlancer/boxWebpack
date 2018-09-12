@@ -1,10 +1,10 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 
-import WidgetNotifications from "./WidgetNotifications";
+import WidgetNotifications from './WidgetNotifications'
 
-import data from "./WidgetNotifications.json";
+import data from './WidgetNotifications.json'
 
-storiesOf("Organisms/Widgets", module).add("notification", () => (
+storiesOf('Organisms/Widgets', module).add('notification', () => (
     <WidgetNotifications dataNotifications={data.notifications} />
-));
+))

@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { hot } from "react-hot-loader";
+import React, { Component } from 'react'
+import { hot } from 'react-hot-loader'
 
-import { InlineNotification } from "carbon-components-react";
-import WidgetHelp from "_components/organisms/widgets/WidgetHelp";
-import WidgetNotifications from "_components/organisms/widgets/WidgetNotifications";
-import WidgetReleaseNotes from "_components/organisms/widgets/WidgetReleaseNotes";
-import TileSelector from "../../organisms/TileSelector/TileSelector";
-import PageHeader from "../../organisms/PageHeader/PageHeader";
+import { InlineNotification } from 'carbon-components-react'
+import WidgetHelp from '_components/organisms/widgets/WidgetHelp'
+import WidgetNotifications from '_components/organisms/widgets/WidgetNotifications'
+import WidgetReleaseNotes from '_components/organisms/widgets/WidgetReleaseNotes'
+import TileSelector from '../../organisms/TileSelector/TileSelector'
+import PageHeader from '../../organisms/PageHeader/PageHeader'
 
-import data from "./Dashboard.json";
+import data from './Dashboard.json'
 
 class Dashboard extends Component {
     render() {
@@ -31,8 +31,8 @@ class Dashboard extends Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default hot(module)(Dashboard);
+export default hot(module)(Dashboard)

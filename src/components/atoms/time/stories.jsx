@@ -1,6 +1,6 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 
-import Clock from './index';
+import Clock from './index'
 
-storiesOf('Atoms/Time', module).add('default', () => <Clock>It is: </Clock>);
+storiesOf('Atoms/Time', module).add('default', () => <Clock>It is: </Clock>)

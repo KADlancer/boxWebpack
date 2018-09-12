@@ -1,6 +1,6 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 
-import WidgetHelp from "./WidgetHelp";
+import WidgetHelp from './WidgetHelp'
 
-storiesOf("Organisms/Widgets", module).add("help", () => <WidgetHelp />);
+storiesOf('Organisms/Widgets', module).add('help', () => <WidgetHelp />)

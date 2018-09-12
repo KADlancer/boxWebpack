@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import Segments from "../../molecules/Segments/Segments";
+import React, { Component } from 'react'
+import Segments from '../../molecules/Segments/Segments'
 
-import "./WidgetHelp.css";
+import './WidgetHelp.css'
 
 class WidgetNotifications extends Component {
     constructor(props) {
-        super(props);
+        super(props)
     }
 
     render() {
@@ -21,14 +21,14 @@ class WidgetNotifications extends Component {
                     <div dangerouslySetInnerHTML={{ __html: item.text }} />
                 </Segments>
             </Segments>
-        ));
+        ))
         return (
             <div className="WidgetNotifications">
                 <h2>Notifications</h2>
                 {notifications}
             </div>
-        );
+        )
     }
 }
 
-export default WidgetNotifications;
+export default WidgetNotifications

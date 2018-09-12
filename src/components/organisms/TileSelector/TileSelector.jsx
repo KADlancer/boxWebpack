@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { Button, SelectableTile } from 'carbon-components-react';
+import React, { Component } from 'react'
+import { Button, SelectableTile } from 'carbon-components-react'
 
-import './TileSelector.css';
-import CarbonButton from '_components/atoms/carbonButton/CarbonButton';
+import './TileSelector.css'
+import CarbonButton from '_components/atoms/carbonButton/CarbonButton'
 
 function handleClick() {
-    console.log('handleClick TileSelector: ', this);
+    console.log('handleClick TileSelector: ', this)
 }
 function onChange() {
-    console.log('onChange TileSelector: ', this);
+    console.log('onChange TileSelector: ', this)
 }
 
 class TileSelector extends Component {
     constructor(props) {
-        super(props);
+        super(props)
     }
 
     render() {
@@ -28,7 +28,7 @@ class TileSelector extends Component {
             >
                 {item.text}
             </SelectableTile>
-        ));
+        ))
         return (
             <div className="TileSelector">
                 <div className="bx--grid">
@@ -50,8 +50,8 @@ class TileSelector extends Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default TileSelector;
+export default TileSelector

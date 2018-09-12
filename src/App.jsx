@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { hot } from 'react-hot-loader';
-import './App.css';
-import MyContainer from './components/_demo/myContainer';
+import React, { Component } from 'react'
+import { hot } from 'react-hot-loader'
+import './App.css'
+import MyContainer from './components/_demo/myContainer'
 
 class App extends Component {
     render() {
@@ -17,8 +17,8 @@ class App extends Component {
                     </div>
                 </MyContainer>
             </div>
-        );
+        )
     }
 }
 
-export default hot(module)(App);
+export default hot(module)(App)

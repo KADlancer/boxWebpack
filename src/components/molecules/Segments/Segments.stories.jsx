@@ -1,6 +1,6 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Segments from './Segments';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import Segments from './Segments'
 
 storiesOf('Molecules/Segment', module)
     .add('default', () => (
@@ -129,4 +129,4 @@ storiesOf('Molecules/Segment', module)
                 <p>Bottom</p>
             </Segments>
         </Segments>
-    ));
+    ))
