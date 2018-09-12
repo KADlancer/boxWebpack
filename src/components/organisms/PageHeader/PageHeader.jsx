@@ -68,7 +68,7 @@ class PageHeader extends Component {
                     </TooltipIcon>
                     &nbsp;&nbsp;
                     <div>
-                        <span className="icon icon-large icon-audi">The World of Audi</span>
+                        <span className="icon icon-large icon-test">The World of Test Edit</span>
                     </div>
                     &nbsp;&nbsp;
                 </div>
