@@ -79,6 +79,19 @@ storiesOf('Molecules/Segment', module)
             </Segments>
         </Segments>
     ))
+    .add('vertical open', () => (
+        <div>
+            <Segments className="vertical">
+                <p>Top</p>
+            </Segments>
+            <Segments className="vertical">
+                <p>Middle</p>
+            </Segments>
+            <Segments className="vertical">
+                <p>Bottom</p>
+            </Segments>
+        </div>
+    ))
     .add('nested grouped', () => (
         <Segments>
             <Segments>
