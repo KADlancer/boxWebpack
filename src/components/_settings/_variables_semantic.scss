@@ -3,10 +3,10 @@
 */
 
 $background: white;
-$boxShadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+$boxShadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
 $margin: 1rem 0;
 $padding: 1em 1em;
-$borderRadius: 0px;
+$borderRadius: 0;
 $border: 1px solid rgba(34, 36, 38, 0.15);
 $borderWidth: 1px;
 $borderColor: rgba(34, 36, 38, 0.15);
@@ -42,7 +42,7 @@ $green: green;
 //$attachedBorder: x;
 $attachedTopOffset: 0;
 $attachedBottomOffset: 0;
-$attachedBottomBoxShadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+$attachedBottomBoxShadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), none;
 //
 $stackedPadding: 1.4em;
 $stackedHeight: 5px;
@@ -57,11 +57,11 @@ $stackedPageBackground: rgba(0, 0, 0, 0.03);
 //
 //$circularPadding
 //
-$raisedBoxShadow: 0 0 2px rgba(0,0,0,0.5);
+$raisedBoxShadow: 0 0 2px rgba(0, 0, 0, 0.5);
 //
-$groupedMargin: 1rem 0em;
+$groupedMargin: 1rem 0;
 $groupedBorder: 1px solid rgba(34, 36, 38, 0.15);
-$groupedBoxShadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+$groupedBoxShadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
 $groupedBorderRadius: 0;
 //
 $groupedSegmentMargin: 0;
