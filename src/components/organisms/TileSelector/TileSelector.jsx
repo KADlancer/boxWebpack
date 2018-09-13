@@ -12,7 +12,7 @@ function onChange() {
 }
 
 const TileSelector = props => {
-    const tiles = props.tiles
+    const { tiles } = props
     const listItems = tiles.map(item => (
         <SelectableTile
             key={item.id}

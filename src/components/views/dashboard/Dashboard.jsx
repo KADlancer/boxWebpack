@@ -1,11 +1,8 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-
-import WidgetHelp from '../../organisms/widgets/WidgetHelp.jsx'
-import WidgetNotifications from '../../organisms/widgets/WidgetNotifications.jsx'
-import WidgetReleaseNotes from '../../organisms/widgets/WidgetReleaseNotes.jsx'
-import TileSelector from '../../organisms/TileSelector/TileSelector.jsx'
-import PageHeader from '../../organisms/PageHeader/PageHeader.jsx'
+import { WidgetHelp, WidgetNotifications, WidgetReleaseNotes } from '../../organisms/widgets'
+import TileSelector from '../../organisms/TileSelector/TileSelector'
+import PageHeader from '../../organisms/PageHeader/PageHeader'
 
 import data from './Dashboard.json'
 

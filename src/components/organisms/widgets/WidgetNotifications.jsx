@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Segments from '../../molecules/Segments/Segments.jsx'
+import Segments from '../../molecules/Segments'
 import './Widgets.css'
 
 const WidgetNotifications = props => {
-    const notifications = props.dataNotifications.map(item => (
+    const { dataNotifications } = props
+    const notifications = dataNotifications.map(item => (
         <Segments>
             <Segments className="segment__header--attention">
                 <p>

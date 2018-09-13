@@ -1,5 +1,5 @@
 import React from 'react'
-import Segments from '../../molecules/Segments/Segments.jsx'
+import Segments from '../../molecules/Segments'
 import './Widgets.css'
 
 const WidgetHelp = () => (

@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Segments from '../../molecules/Segments/Segments.jsx'
+import Segments from '../../molecules/Segments'
 import './Widgets.css'
 
 const WidgetReleaseNotes = props => {
-    const releaseNotes = props.dataReleaseNotes.map(item => (
+    const { dataReleaseNotes } = props
+    const releaseNotes = dataReleaseNotes.map(item => (
         <Segments>
             <Segments className="segment__header--success">
                 <p>

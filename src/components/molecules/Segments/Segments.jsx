@@ -5,15 +5,15 @@ import './Segments_custom.scss'
 import PropTypes from 'prop-types'
 
 const Segments = props => {
-    const children = props.children
-    let className = 'ui segment'
+    const { children, className } = props
+    let classString = 'ui segment'
     if (React.Children.count(children) > 1) {
-        className += 's'
+        classString += 's'
     }
-    if (props.className) {
-        className += ` ${props.className}`
+    if (className) {
+        classString += ` ${props.className}`
     }
-    return <div className={className}>{React.Children.map(children, child => child)}</div>
+    return <div className={classString}>{React.Children.map(children, child => child)}</div>
 }
 
 Segments.propTypes = {
