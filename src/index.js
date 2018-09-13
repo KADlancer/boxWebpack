@@ -1,13 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import Dashboard from './components/views/dashboard'
+import Utilities from './components/_utilities'
 import './css/styles.scss'
 
-import Dashboard from './components/views/dashboard/Dashboard'
+const Check = new Utilities()
+Check.run()
 
-if (process.env.NODE_ENV !== 'production') {
-    const { whyDidYouUpdate } = require('why-did-you-update')
-    whyDidYouUpdate(React)
-}
-
-ReactDOM.render(<Dashboard />, document.getElementById('root'))
+ReactDOM.render(React.createElement(Dashboard), document.getElementById('root'))

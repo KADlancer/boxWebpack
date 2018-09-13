@@ -35,7 +35,6 @@
     "@storybook/addon-options": "^4.0.0-alpha.20",
     "@storybook/addon-viewport": "^4.0.0-alpha.20",
     "@storybook/addons": "^4.0.0-alpha.20",
-    "@storybook/react": "^4.0.0-alpha.20",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.1",
     "css-loader": "^1.0.0",
@@ -64,6 +63,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "@storybook/react": "^4.0.0-alpha.20",
     "carbon-components": "^9.10.0",
     "carbon-components-react": "^6.28.1",
     "carbon-icons": "^7.0.7",
