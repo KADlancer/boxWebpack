@@ -18,7 +18,7 @@ function loadStories() {
 
 setDefaults({
 	header: false, // Toggles display of header with component name and description
-	inline: false, // Displays info inline vs click button to view
+	inline: true, // Displays info inline vs click button to view
 	source: true,  // Displays the source of story Component
 	maxPropStringLength: 200, // Displays the first 200 characters in the default prop string
 });

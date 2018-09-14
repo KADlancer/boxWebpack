@@ -231,47 +231,6 @@
 //    padding-right: 0;
 //}
 //
-///* -------------------
-//       Compact
-//-------------------- */
-//
-//.ui.compact.segment {
-//    display: table;
-//}
-//
-///* Compact Group */
-//.ui.compact.segments {
-//    display: inline-flex;
-//}
-//.ui.compact.segments .segment,
-//.ui.segments .compact.segment {
-//    display: block;
-//    flex: 0 1 auto;
-//}
-//
-///* -------------------
-//       Circular
-//-------------------- */
-//
-//.ui.circular.segment {
-//    display: table-cell;
-//    padding: $circularPadding;
-//    text-align: center;
-//    vertical-align: middle;
-//    border-radius: 500em;
-//}
-//
-
-/* -------------------
-       Raised
--------------------- */
-
-.ui.raised.segments,
-.ui.raised.segment {
-  box-shadow: $raisedBoxShadow;
-}
-//
-//
 
 /*******************************
             Groups
@@ -306,6 +265,47 @@
   box-shadow: $groupedSegmentBoxShadow;
   border: $groupedSegmentBorder;
   border-top: $groupedSegmentDivider;
+}
+
+/* -------------------
+       Compact
+-------------------- */
+
+.ui.compact.segment {
+  display: table;
+}
+
+/* Compact Group */
+.ui.compact.segments {
+  display: inline-flex;
+}
+
+.ui.compact.segments .segment,
+.ui.segments .compact.segment {
+  display: block;
+  flex: 0 1 auto;
+}
+//
+///* -------------------
+//       Circular
+//-------------------- */
+//
+//.ui.circular.segment {
+//    display: table-cell;
+//    padding: $circularPadding;
+//    text-align: center;
+//    vertical-align: middle;
+//    border-radius: 500em;
+//}
+//
+
+/* -------------------
+       Raised
+-------------------- */
+
+.ui.raised.segments,
+.ui.raised.segment {
+  box-shadow: $raisedBoxShadow;
 }
 
 /* Horizontal Segment */
