@@ -6,7 +6,7 @@ import './Widgets.css'
 const WidgetReleaseNotes = props => {
     const { dataReleaseNotes } = props
     const releaseNotes = dataReleaseNotes.map(item => (
-        <Segments>
+        <Segments key={item.id}>
             <Segments className="segment__header--success">
                 <p>
                     {item.label}

@@ -46,7 +46,7 @@ const TileSelector = props => {
 }
 
 TileSelector.propTypes = {
-    tiles: PropTypes.object.isRequired,
+    tiles: PropTypes.array.isRequired,
 }
 
 export default TileSelector

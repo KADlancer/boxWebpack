@@ -6,7 +6,7 @@ import './Widgets.css'
 const WidgetNotifications = props => {
     const { dataNotifications } = props
     const notifications = dataNotifications.map(item => (
-        <Segments>
+        <Segments key={item.id}>
             <Segments className="segment__header--attention">
                 <p>
                     {item.label}
@@ -27,7 +27,7 @@ const WidgetNotifications = props => {
 }
 
 WidgetNotifications.propTypes = {
-    dataNotifications: PropTypes.object.isRequired,
+    dataNotifications: PropTypes.array.isRequired,
 }
 
 export default WidgetNotifications
