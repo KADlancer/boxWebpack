@@ -18,6 +18,6 @@ module.exports = merge(baseConfig, {
 		]
 	},
     output: {
-        filename: `${filename}.js`,
+        filename: `js/${filename}.js`,
     },
 })
