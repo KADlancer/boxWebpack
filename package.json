@@ -16,6 +16,7 @@
     "start": "webpack-dev-server --inline --config webpack.development.config.js",
     "build": "webpack --config webpack.development.config.js",
     "buildProd": "webpack --config webpack.production.config.js",
+    "buildCheck": "webpack --config webpack.analyzer.config.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test:lint:js": "eslint src --ext .jsx,.js",
     "test:lint:css": "stylelint --config=.stylelintrc '**/*.scss'",
@@ -66,6 +67,7 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.3.0",
     "webpack": "^4.17.1",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.7",
     "webpack-merge": "^4.1.4"

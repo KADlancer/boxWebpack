@@ -14,5 +14,5 @@ module.exports = merge(baseConfig, {
 		rules: [
 			stripLoader
 		]
-	}
+	},
 });
