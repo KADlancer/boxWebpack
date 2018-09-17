@@ -2,7 +2,7 @@ const merge = require('webpack-merge');
 const WebpackStrip = require('strip-loader');
 const baseConfig = require('./webpack.config');
 
-const filename = '[name]-[chunkhash]'
+const filename = '[name]-[hash]'
 
 const stripLoader = {
 	test: [/\.es6$/, /\.js$/],
