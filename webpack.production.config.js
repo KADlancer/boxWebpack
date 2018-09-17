@@ -1,6 +1,6 @@
-const merge = require('webpack-merge');
-const WebpackStrip = require('strip-loader');
-const baseConfig = require('./webpack.config');
+const merge = require('webpack-merge')
+const WebpackStrip = require('strip-loader')
+const baseConfig = require('./webpack.config')
 
 const filename = '[name]-[hash]'
 
@@ -20,4 +20,4 @@ module.exports = merge(baseConfig, {
     output: {
         filename: `${filename}.js`,
     },
-});
+})

@@ -1,6 +1,6 @@
-const merge = require('webpack-merge');
-const baseConfig = require('./webpack.production.config');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const merge = require('webpack-merge')
+const baseConfig = require('./webpack.production.config')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = merge(baseConfig, {
     plugins: [
@@ -9,4 +9,4 @@ module.exports = merge(baseConfig, {
             reportFilename: "report.html",
         })
     ],
-});
+})
