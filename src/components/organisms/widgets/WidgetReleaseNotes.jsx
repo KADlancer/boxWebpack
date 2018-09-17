@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Segments from '../../molecules/Segments'
 import './Widgets.css'
+import tempHtmlToReactParser from '../../_utilities/htmlToReactParser'
 
 const WidgetReleaseNotes = props => {
     const { dataReleaseNotes } = props
@@ -14,7 +15,7 @@ const WidgetReleaseNotes = props => {
                 </p>
             </Segments>
             <Segments>
-                <div dangerouslySetInnerHTML={{ __html: item.text }} />
+                <div>{tempHtmlToReactParser(item.text)}</div>
             </Segments>
         </Segments>
     ))

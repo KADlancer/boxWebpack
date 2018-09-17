@@ -5,10 +5,14 @@ import { SelectableTile, Button } from 'carbon-components-react'
 import './TileSelector.css'
 
 function handleClick() {
+    /* eslint-disable */
     console.log('handleClick TileSelector: ', this)
+    /* eslint-enable */
 }
 function onChange() {
+    /* eslint-disable */
     console.log('onChange TileSelector: ', this)
+    /* eslint-enable */
 }
 
 const TileSelector = props => {

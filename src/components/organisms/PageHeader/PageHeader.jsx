@@ -5,7 +5,9 @@ import './PageHeader.css'
 
 const PageHeader = () => {
     const onChange = e => {
+        /* eslint-disable */
         console.log('onChange: ', e)
+        /* eslint-enable */
     }
 
     return (

@@ -8,7 +8,9 @@ const utilities = () => {
         /* eslint-enable */
         whyDidYouUpdate(React)
     }
+    /* eslint-disable */
     console.log('NODE_ENV', environment)
+    /* eslint-enable */
 }
 
 export default utilities

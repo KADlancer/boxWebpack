@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Segments from '../../molecules/Segments'
+import tempHtmlToReactParser from '../../_utilities/htmlToReactParser'
 import './Widgets.css'
 
 const WidgetNotifications = props => {
@@ -14,7 +15,7 @@ const WidgetNotifications = props => {
                 </p>
             </Segments>
             <Segments>
-                <div dangerouslySetInnerHTML={{ __html: item.text }} />
+                <div>{tempHtmlToReactParser(item.text)}</div>
             </Segments>
         </Segments>
     ))
