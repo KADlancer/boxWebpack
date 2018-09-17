@@ -2,6 +2,8 @@ const merge = require('webpack-merge');
 const WebpackStrip = require('strip-loader');
 const baseConfig = require('./webpack.config');
 
+const filename = '[name]-[chunkhash]'
+
 const stripLoader = {
 	test: [/\.es6$/, /\.js$/],
 	exclude: /node_modules/,
@@ -15,4 +17,7 @@ module.exports = merge(baseConfig, {
 			stripLoader
 		]
 	},
+    output: {
+        filename: `${filename}.js`,
+    },
 });

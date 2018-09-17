@@ -1,14 +1,30 @@
 const path = require('path');
-const resolve = require('./webpack/resolve.js');
 
 module.exports = {
 	resolve: {
-		alias: resolve.alias,
-        extensions: ['.js','.jsx'],
+        extensions: ['.js','.jsx','.ts','.tsx'],
+		alias: {
+            _components: path.resolve(__dirname, '..', 'src/components/'),
+            _views: path.resolve(__dirname, '..', 'src/views/'),
+        },
 	},
 	module: {
 		rules: [
-			{
+            {
+                test: /\.(png|svg|jpg|gif|ico)$/,
+                use: [
+                    'file-loader',
+                ],
+            },
+            {
+                test: /\.(woff|woff2)$/,
+                include: path.resolve(__dirname, 'src/fonts'),
+                use: [
+                    'file-loader',
+                ],
+            },
+
+            {
 				test: /\.(js|jsx)$/,
 				exclude: /(node_modules|bower_components)/,
 				loader: 'babel-loader',
