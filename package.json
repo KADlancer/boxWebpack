@@ -16,7 +16,7 @@
     "start": "webpack-dev-server --inline --config webpack.development.config.js",
     "build": "webpack --config webpack.development.config.js",
     "buildProd": "webpack --config webpack.production.config.js",
-    "buildCheck": "webpack --config webpack.analyzer.config.js",
+    "analyze": "webpack --config webpack.analyzer.config.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test:lint:js": "eslint src --ext .jsx,.js",
     "test:lint:css": "stylelint --config=.stylelintrc '**/*.scss'",

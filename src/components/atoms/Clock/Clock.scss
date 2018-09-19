@@ -1,0 +1,16 @@
+.Clock {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+    display: inline-block;
+
+    &.normal {
+        background: white;
+        color: black;
+    }
+    &.hovered {
+        background: #ff7100;
+        color: white;
+    }
+}
