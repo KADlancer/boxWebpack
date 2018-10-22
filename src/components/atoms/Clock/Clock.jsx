@@ -1,31 +1,23 @@
 import * as React from 'react'
 
-import './Clock.scss'
+// import './Clock.scss'
 
 const STATUS = {
     HOVERED: 'Clock hovered',
     NORMAL: 'Clock normal',
-};
+}
 
 class Clock extends React.Component {
     constructor(props) {
         super(props)
 
-        this._onMouseEnter = this._onMouseEnter.bind(this)
-        this._onMouseLeave = this._onMouseLeave.bind(this)
+        this.onMouseEnter = this.onMouseEnter.bind(this)
+        this.onMouseLeave = this.onMouseLeave.bind(this)
 
         this.state = {
             class: STATUS.NORMAL,
             time: new Date().toLocaleTimeString(),
         }
-    }
-
-    _onMouseEnter() {
-        this.setState({class: STATUS.HOVERED});
-    }
-
-    _onMouseLeave() {
-        this.setState({class: STATUS.NORMAL});
     }
 
     componentDidMount() {
@@ -34,6 +26,14 @@ class Clock extends React.Component {
 
     componentWillUnmount() {
         clearInterval(this.intervalID)
+    }
+
+    onMouseEnter() {
+        this.setState({ class: STATUS.HOVERED })
+    }
+
+    onMouseLeave() {
+        this.setState({ class: STATUS.NORMAL })
     }
 
     tick() {
@@ -47,8 +47,8 @@ class Clock extends React.Component {
         return (
             <p
                 className={this.state.class}
-                onMouseEnter={this._onMouseEnter}
-                onMouseLeave={this._onMouseLeave}
+                onMouseEnter={this.onMouseEnter}
+                onMouseLeave={this.onMouseLeave}
             >
                 {this.props.children}
                 {time}

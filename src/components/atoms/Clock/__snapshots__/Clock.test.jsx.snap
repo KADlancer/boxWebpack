@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered should render correctly 1`] = `
+<p
+  className="Clock normal"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  It is: 
+  4:23:01 PM
+</p>
+`;

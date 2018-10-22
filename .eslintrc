@@ -5,7 +5,8 @@
     "LOGIN_URL": true
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   },
   "extends": [
     "airbnb",
