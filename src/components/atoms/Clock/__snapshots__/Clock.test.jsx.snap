@@ -7,6 +7,6 @@ exports[`Link changes the class when hovered should render correctly 1`] = `
   onMouseLeave={[Function]}
 >
   It is: 
-  4:23:01 PM
+  12:00:00 AM
 </p>
 `;
